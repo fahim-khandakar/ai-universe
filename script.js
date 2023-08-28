@@ -104,7 +104,9 @@ ${ai.pricing
   <!-- second  -->
   <div class = "w-full md:w-1/2">
     <div><img src="${ai.image_link[0]}" alt=""></div>
-    <div class = "text-center my-3">${ai.input_output_examples[0].input}</div>
+    <div class = "text-center my-3 font-bold">${
+      ai.input_output_examples[0].input
+    }</div>
     <div class = "text-center">${ai.input_output_examples[0].output}</div>
   </div>
 </div>
