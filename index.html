@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- daisy Ui link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="container mx-auto my-10 p-5">
+      <div class="flex flex-col items-center">
+        <h1 class="text-4xl font-extrabold">AI Universe Hub</h1>
+        <button class="p-3 my-8 rounded-lg bg-teal-400">Sort By Date</button>
+      </div>
+      <section>
+        <!-- show data container  -->
+        <div
+          id="show-data-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        ></div>
+        <!-- show all button  -->
+        <div id="show-all-btn" class="text-center hidden">
+          <button class="p-3 my-8 rounded-lg bg-teal-400" onclick="showAll()">
+            Show All
+          </button>
+        </div>
+      </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <form method="dialog" class="modal-box max-w-5xl">
+          <div id="show-modal"></div>
+          <div class="modal-action justify-center">
+            <button class="btn">Close</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
