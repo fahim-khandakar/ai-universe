@@ -20,36 +20,32 @@ const showData = (ai, isShowAll) => {
     ai = ai.slice(0, 6);
   }
 
-  ai.forEach((item) => {
+  ai?.forEach((item) => {
     console.log(item);
     const div = document.createElement("div");
     div.classList = "card  bg-base-100 shadow-xl";
 
     div.innerHTML = `
-           <figure>
-              <img
-                src="${item.image}"
-                alt="not found"
-              />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title font-bold">Features</h2>
-              <ol>
-                 ${item.features
-                   .map(
-                     (feature, index) => `<li>${`${index + 1} ${feature}`}</li>`
-                   )
-                   .join("")}
-              </ol>
+  <figure>
+    <img
+      src="${item.image}"
+      alt="Not Found"
+      onerror="this.src='https://og.jasper.ai/Jasper%20Chat.png'"
+    />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title font-bold">Features</h2>
+    <ol>
+      ${item?.features
+        .map((feature, index) => `<li>${index + 1} ${feature}</li>`)
+        .join("")}
+    </ol>
+    <hr class="mt-5">
+    <div class="my-3 font-bold text-2xl">${item?.name}</div>
+    <div class="font-semibold">${item?.published_in}</div>
+  </div>
+`;
 
-                <hr class = "mt-5">
-
-                <div class = "my-3 font-bold text-2xl">
-                ${item.name}
-                </div>
-                <div class = "font-semibold"> ${item.published_in} </div>
-            </div>
-  `;
     div.onclick = () => {
       showDetailsData(item.id);
     };
