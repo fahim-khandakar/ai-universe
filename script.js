@@ -99,7 +99,9 @@ ${ai.pricing
   </div>
   <!-- second  -->
   <div class = "w-full md:w-1/2">
-    <div><img src="${ai.image_link[0]}" alt=""></div>
+    <div><img src="${
+      ai.image_link[0]
+    }" alt="" onerror="this.src='https://og.jasper.ai/Jasper%20Chat.png'"></div>
     <div class = "text-center my-3 font-bold">${
       ai.input_output_examples[0].input
     }</div>
